@@ -45,7 +45,7 @@
             // 
             // okUnwrap
             // 
-            this.okUnwrap.Location = new System.Drawing.Point(6, 132);
+            this.okUnwrap.Location = new System.Drawing.Point(3, 175);
             this.okUnwrap.Name = "okUnwrap";
             this.okUnwrap.Size = new System.Drawing.Size(120, 32);
             this.okUnwrap.TabIndex = 0;
@@ -55,7 +55,7 @@
             // 
             // selectFile
             // 
-            this.selectFile.Location = new System.Drawing.Point(6, 19);
+            this.selectFile.Location = new System.Drawing.Point(3, 3);
             this.selectFile.Name = "selectFile";
             this.selectFile.Size = new System.Drawing.Size(120, 32);
             this.selectFile.TabIndex = 0;
@@ -65,7 +65,7 @@
             // 
             // destinationFolder
             // 
-            this.destinationFolder.Location = new System.Drawing.Point(6, 74);
+            this.destinationFolder.Location = new System.Drawing.Point(3, 89);
             this.destinationFolder.Name = "destinationFolder";
             this.destinationFolder.Size = new System.Drawing.Size(120, 32);
             this.destinationFolder.TabIndex = 1;
@@ -111,7 +111,7 @@
             // 
             // okWrap
             // 
-            this.okWrap.Location = new System.Drawing.Point(6, 146);
+            this.okWrap.Location = new System.Drawing.Point(3, 175);
             this.okWrap.Name = "okWrap";
             this.okWrap.Size = new System.Drawing.Size(120, 32);
             this.okWrap.TabIndex = 3;
@@ -120,7 +120,7 @@
             // 
             // selectDestinationWrap
             // 
-            this.selectDestinationWrap.Location = new System.Drawing.Point(6, 53);
+            this.selectDestinationWrap.Location = new System.Drawing.Point(3, 89);
             this.selectDestinationWrap.Name = "selectDestinationWrap";
             this.selectDestinationWrap.Size = new System.Drawing.Size(120, 32);
             this.selectDestinationWrap.TabIndex = 3;
@@ -129,7 +129,7 @@
             // 
             // selectOrigin
             // 
-            this.selectOrigin.Location = new System.Drawing.Point(6, 15);
+            this.selectOrigin.Location = new System.Drawing.Point(3, 3);
             this.selectOrigin.Name = "selectOrigin";
             this.selectOrigin.Size = new System.Drawing.Size(120, 32);
             this.selectOrigin.TabIndex = 3;
