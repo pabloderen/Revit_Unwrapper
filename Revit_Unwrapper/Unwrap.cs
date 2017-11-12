@@ -12,6 +12,8 @@ namespace Revit_Unwrapper
 {
     public partial class Unwrap : Form
     {
+        private string revitFileTemplate;
+
         public Unwrap()
         {
             InitializeComponent();
@@ -68,7 +70,44 @@ namespace Revit_Unwrapper
 
         private void closeButton_Click(object sender, EventArgs e)
         {
+            
             this.Close();
+        }
+
+        private void selectOrigin_Click(object sender, EventArgs e)
+        {
+           
+
+        }
+
+        private void selectDestinationWrap_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.InitialDirectory = "c:\\";
+            openFileDialog1.Filter = "Revit files (*.rvt)|*.rvt";
+            openFileDialog1.FilterIndex = 2;
+            openFileDialog1.RestoreDirectory = true;
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    if ((revitFileTemplate = openFileDialog1.FileName) != null)
+                    {
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
+                }
+            }
+
+        }
+
+        private void okWrap_Click(object sender, EventArgs e)
+        {
+            Wrapper.wrapper(revitFileTemplate);
         }
     }
 }

@@ -117,6 +117,7 @@
             this.okWrap.TabIndex = 3;
             this.okWrap.Text = "Ok";
             this.okWrap.UseVisualStyleBackColor = true;
+            this.okWrap.Click += new System.EventHandler(this.okWrap_Click);
             // 
             // selectDestinationWrap
             // 
@@ -126,6 +127,7 @@
             this.selectDestinationWrap.TabIndex = 3;
             this.selectDestinationWrap.Text = "Select Destination";
             this.selectDestinationWrap.UseVisualStyleBackColor = true;
+            this.selectDestinationWrap.Click += new System.EventHandler(this.selectDestinationWrap_Click);
             // 
             // selectOrigin
             // 
@@ -135,6 +137,7 @@
             this.selectOrigin.TabIndex = 3;
             this.selectOrigin.Text = "Select origin";
             this.selectOrigin.UseVisualStyleBackColor = true;
+            this.selectOrigin.Click += new System.EventHandler(this.selectOrigin_Click);
             // 
             // closeButton
             // 
