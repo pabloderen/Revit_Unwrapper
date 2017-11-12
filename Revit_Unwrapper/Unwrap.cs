@@ -10,14 +10,15 @@ using System.Windows.Forms;
 
 namespace Revit_Unwrapper
 {
-    public partial class Form1 : Form
+    public partial class Unwrap : Form
     {
-        public Form1()
+        public Unwrap()
         {
             InitializeComponent();
         }
 
-        public string revitFile { get; private set; }
+        public static string revitFile { get; private set; }
+        public string destination { get; private set; }
 
         private void selectFile_Click(object sender, EventArgs e)
         {
@@ -41,6 +42,33 @@ namespace Revit_Unwrapper
                     MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
                 }
             }
+        }
+
+        private void okUnwrap_click(object sender, EventArgs e)
+        {
+            _7zip.ExtractFile(revitFile, destination);
+            this.DialogResult = DialogResult.OK;
+            
+
+        }
+
+        private void destinationFolder_Click(object sender, EventArgs e)
+        {
+            using (var fbd = new FolderBrowserDialog())
+            {
+                DialogResult result = fbd.ShowDialog();
+
+                if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
+                {
+                    destination = fbd.SelectedPath;
+
+                }
+            }
+        }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
