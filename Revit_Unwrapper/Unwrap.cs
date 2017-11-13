@@ -13,6 +13,7 @@ namespace Revit_Unwrapper
     public partial class Unwrap : Form
     {
         private string revitFileTemplate;
+        private string RevitUnwrappedFolder;
 
         public Unwrap()
         {
@@ -75,7 +76,16 @@ namespace Revit_Unwrapper
         }
 
         private void selectOrigin_Click(object sender, EventArgs e)
-        {
+        {using (var fbd = new FolderBrowserDialog())
+            {
+                DialogResult result = fbd.ShowDialog();
+
+                if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
+                {
+                    RevitUnwrappedFolder = fbd.SelectedPath;
+
+                }
+            }
            
 
         }
@@ -107,7 +117,12 @@ namespace Revit_Unwrapper
 
         private void okWrap_Click(object sender, EventArgs e)
         {
-            Wrapper.wrapper(revitFileTemplate);
+            Wrapper.wrapper( RevitUnwrappedFolder);
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
