@@ -60,31 +60,15 @@ namespace Revit_Unwrapper
             }
         }
 
-        public static void wrapper( string folder)
+        public static void wrapper( string folder, string destination)
         {
-
 
             //Create new compoundFile
             CompoundFile compFile = new CompoundFile();
             addData(folder, compFile);
 
-            //TODO: Read the revit temokate ad update with folder content
+            compFile.Save(destination);
 
-
-
-
-
-            compFile.Save(@"D:\test.rvt");
-
-
-//           BasicFileInfo
-//Contents
-//Formats
-//Global
-//Partitions
-//ProjectInformation
-//RevitPreview4.0
-//TransmissionData
 
         }
     }
